@@ -1,178 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Room with a View — E. M. Forster, typeset</title>
-<meta name="description" content="An excerpt from Chapter I of E. M. Forster’s A Room with a View, typeset as a page from an illustrated book.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,100..900,0..100;1,9..144,100..900,0..100&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Room with a View</title>
+  <!-- Two Google fonts: Fraunces (headings) and Source Serif 4 (text) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#story">Skip to the story</a>
-<button class="night-toggle" type="button" aria-pressed="false">Night reading</button>
 
-<header class="titlepage">
-  <div>
-    <h1>A Room <em>with a</em> View</h1>
-    <p class="byline">E. M. Forster</p>
-    <p class="edition">From Chapter I, “The Bertolini,” set as a page from an illustrated book.</p>
-  </div>
-  <figure>
-    <svg class="arch" viewBox="0 0 300 420" role="img" aria-labelledby="a1t a1d">
-      <title id="a1t">An arched window above the Arno at dusk</title>
-      <desc id="a1d">Dark cypresses and layered hills stand above a river while a pale moon rises into a sky that fades from deep green to gold.</desc>
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--cypress)"/><stop offset=".6" style="stop-color:var(--arno)"/><stop offset="1" style="stop-color:var(--moon)"/></linearGradient>
-        <clipPath id="ar"><path d="M20 410V150a130 130 0 0 1 260 0V410z"/></clipPath>
-      </defs>
-      <g clip-path="url(#ar)">
-        <rect width="300" height="420" fill="url(#sky)"/>
-        <circle cx="208" cy="140" r="21" fill="var(--paper)" opacity=".92"/>
-        <path d="M0 262q55-42 115-18t110-22 75 14v200H0z" fill="var(--cypress)" opacity=".55"/>
-        <path d="M0 296q70-34 140-6t160-12v140H0z" fill="var(--cypress)" opacity=".85"/>
-        <rect y="318" width="300" height="110" fill="var(--arno)"/>
-        <path d="M30 340h70M120 356h90M60 376h60M170 332h80M200 388h70" stroke="var(--moon)" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
-        <path d="M78 330q-13-70 0-150 13 80 0 150z" fill="var(--cypress)"/>
-        <path d="M236 326q-9-48 0-102 9 54 0 102z" fill="var(--cypress)"/>
-      </g>
-      <path d="M20 410V150a130 130 0 0 1 260 0V410z" fill="none" stroke="var(--ink)" stroke-width="7"/>
-    </svg>
-  </figure>
-</header>
+  <button id="night-button" type="button">Night reading</button>
 
-<main id="story">
-<article>
+  <!-- TITLE PAGE -->
+  <header class="title-page">
+    <div class="arch">
+      <svg viewBox="0 0 200 260" role="img" aria-label="An arched window over a river at dusk, with cypress trees and a rising moon">
+        <rect width="200" height="260" fill="#2F5D5A"/>
+        <circle cx="140" cy="90" r="16" fill="#F1F0EA"/>
+        <ellipse cx="60" cy="180" rx="110" ry="40" fill="#1F3B34"/>
+        <ellipse cx="190" cy="185" rx="80" ry="30" fill="#274B45"/>
+        <rect y="190" width="200" height="70" fill="#3E7F86"/>
+        <rect x="30" y="215" width="50" height="4" fill="#C9A24B"/>
+        <rect x="100" y="232" width="60" height="4" fill="#C9A24B"/>
+        <ellipse cx="45" cy="150" rx="9" ry="50" fill="#14281F"/>
+        <ellipse cx="165" cy="165" rx="7" ry="35" fill="#14281F"/>
+      </svg>
+    </div>
+    <h1>A Room with a View</h1>
+    <p class="byline">by E. M. Forster</p>
+    <p class="edition">From Chapter I, “The Bertolini”</p>
+  </header>
 
-<section class="scene" id="scene-1" aria-labelledby="h-1">
-  <header><h2 id="h-1"><span class="num" aria-hidden="true">I</span>The rooms she was promised</h2></header>
-  <div class="prose">
-    <p class="lead">“The Signora had no business to do it,” said Miss Bartlett, “no business at all. She promised us south rooms with a view close together, instead of which here are north rooms, looking into a courtyard, and a long way apart. Oh, Lucy!”</p>
-    <p>“And a Cockney, besides!” said Lucy, who had been further saddened by the Signora’s unexpected accent. “It might be London.” She looked at the two rows of English people who were sitting at the table; at the row of white bottles of water and red bottles of wine that ran between the English people; at the portraits of the late Queen and the late Poet Laureate that hung behind the English people, heavily framed; at the notice of the English church (Rev. Cuthbert Eager, M. A. Oxon.), that was the only other decoration of the wall. “Charlotte, don’t you feel, too, that we might be in London? I can hardly believe that all kinds of other things are just outside. I suppose it is one’s being so tired.”</p>
-    <p>“This meat has surely been used for soup,” said Miss Bartlett, laying down her fork.</p>
-    <p>“I want so to see the Arno. The rooms the Signora promised us in her letter would have looked over the Arno. The Signora had no business to do it at all. Oh, it is a shame!”</p>
-    <p>“Any nook does for me,” Miss Bartlett continued; “but it does seem hard that you shouldn’t have a view.”</p>
-  </div>
+  <main>
+    <article>
 
-  <figure class="diptych">
-    <svg viewBox="0 0 560 280" role="img" aria-labelledby="a2t a2d">
-      <title id="a2t">Two windows: the courtyard they were given, the Arno they were promised</title>
-      <desc id="a2d">On the left, a grey courtyard wall with shuttered window and a sagging washing line. On the right, a river, a cypress and a tower under a clear sky.</desc>
-      <defs><clipPath id="pane"><path d="M0 270V120a110 110 0 0 1 220 0V270z"/></clipPath></defs>
-      <g transform="translate(30 5)" clip-path="url(#pane)">
-        <rect width="220" height="270" fill="var(--wall)"/>
-        <rect x="70" y="120" width="80" height="110" fill="var(--cypress)" opacity=".85"/>
-        <path d="M110 120v110M70 175h80" stroke="var(--wall)" stroke-width="4"/>
-        <path d="M0 70Q110 118 220 62" fill="none" stroke="var(--ink)" stroke-width="2"/>
-        <path d="M40 86h24v30H40zM98 94h22v26H98zM160 82h24v30h-24z" fill="var(--paper)"/>
-      </g>
-      <path transform="translate(30 5)" d="M0 270V120a110 110 0 0 1 220 0V270z" fill="none" stroke="var(--ink)" stroke-width="5"/>
-      <g transform="translate(310 5)" clip-path="url(#pane)">
-        <rect width="220" height="270" fill="url(#sky)"/>
-        <path d="M0 150q60-34 120-8t100-10v140H0z" fill="var(--cypress)" opacity=".7"/>
-        <rect y="190" width="220" height="90" fill="var(--arno)"/>
-        <path d="M24 214h60M110 232h70M50 250h50" stroke="var(--moon)" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
-        <path d="M170 205q-9-60 0-120 9 60 0 120z" fill="var(--cypress)"/>
-        <path d="M48 160v-46h14v46zM44 114l11-18 11 18z" fill="var(--cypress)"/>
-      </g>
-      <path transform="translate(310 5)" d="M0 270V120a110 110 0 0 1 220 0V270z" fill="none" stroke="var(--ink)" stroke-width="5"/>
-    </svg>
-    <figcaption>North rooms, over a courtyard; south rooms, over the Arno. The view is the whole quarrel.</figcaption>
-  </figure>
+      <!-- SCENE 1 -->
+      <section aria-labelledby="scene1">
+        <h2 id="scene1">I. The rooms she was promised</h2>
+        <p class="opening dropcap">“The Signora had no business to do it,” said Miss Bartlett, “no business at all. She promised us south rooms with a view close together, instead of which here are north rooms, looking into a courtyard, and a long way apart. Oh, Lucy!”</p>
+        <p>“And a Cockney, besides!” said Lucy, who had been further saddened by the Signora’s unexpected accent. “It might be London.” She looked at the two rows of English people who were sitting at the table; at the row of white bottles of water and red bottles of wine that ran between the English people; at the portraits of the late Queen and the late Poet Laureate that hung behind the English people, heavily framed; at the notice of the English church (Rev. Cuthbert Eager, M. A. Oxon.), that was the only other decoration of the wall. “Charlotte, don’t you feel, too, that we might be in London? I can hardly believe that all kinds of other things are just outside. I suppose it is one’s being so tired.”</p>
+        <p>“This meat has surely been used for soup,” said Miss Bartlett, laying down her fork.</p>
+        <p>“I want so to see the Arno. The rooms the Signora promised us in her letter would have looked over the Arno. The Signora had no business to do it at all. Oh, it is a shame!”</p>
+        <p>“Any nook does for me,” Miss Bartlett continued; “but it does seem hard that you shouldn’t have a view.”</p>
 
-  <div class="prose">
-    <p class="lead">Lucy felt that she had been selfish. “Charlotte, you mustn’t spoil me: of course, you must look over the Arno, too. I meant that. The first vacant room in the front—” “You must have it,” said Miss Bartlett, part of whose travelling expenses were paid by Lucy’s mother—a piece of generosity to which she made many a tactful allusion.</p>
-    <p>“No, no. You must have it.”</p>
-    <p>“I insist on it. Your mother would never forgive me, Lucy.”</p>
-    <p>“She would never forgive <em>me</em>.”</p>
-    <p>The ladies’ voices grew animated, and—if the sad truth be owned—a little peevish. They were tired, and under the guise of unselfishness they wrangled. Some of their neighbours interchanged glances, and one of them—one of the ill-bred people whom one does meet abroad—leant forward over the table and actually intruded into their argument. He said:</p>
-    <p>“I have a view, I have a view.”</p>
-  </div>
-</section>
+        <figure>
+          <div class="pair">
+            <div class="arch">
+              <svg viewBox="0 0 160 200" role="img" aria-label="A grey courtyard wall with a shuttered window and a washing line">
+                <rect width="160" height="200" fill="#B9B7AC"/>
+                <rect x="50" y="90" width="60" height="80" fill="#1F3B34"/>
+                <rect x="78" y="90" width="4" height="80" fill="#B9B7AC"/>
+                <rect x="0" y="40" width="160" height="2" fill="#222"/>
+                <rect x="25" y="42" width="18" height="24" fill="#F1F0EA"/>
+                <rect x="100" y="42" width="18" height="20" fill="#F1F0EA"/>
+              </svg>
+            </div>
+            <div class="arch">
+              <svg viewBox="0 0 160 200" role="img" aria-label="The river Arno with a cypress tree, hills and a tower">
+                <rect width="160" height="200" fill="#9CC3C0"/>
+                <ellipse cx="60" cy="130" rx="90" ry="30" fill="#2F5D5A"/>
+                <rect x="30" y="85" width="12" height="45" fill="#1F3B34"/>
+                <rect y="135" width="160" height="65" fill="#3E7F86"/>
+                <rect x="20" y="160" width="40" height="3" fill="#F1F0EA"/>
+                <rect x="80" y="178" width="50" height="3" fill="#F1F0EA"/>
+                <ellipse cx="120" cy="130" rx="7" ry="40" fill="#14281F"/>
+              </svg>
+            </div>
+          </div>
+          <figcaption>North rooms, over a courtyard; south rooms, over the Arno. The view is the whole quarrel.</figcaption>
+        </figure>
 
-<svg class="orn" viewBox="0 0 88 40" aria-hidden="true" focusable="false"><path d="M30 36V20a14 14 0 0 1 28 0v16" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="8" cy="30" r="3" fill="currentColor"/><circle cx="80" cy="30" r="3" fill="currentColor"/><circle cx="44" cy="20" r="3.5" fill="currentColor"/></svg>
+        <p class="opening">Lucy felt that she had been selfish. “Charlotte, you mustn’t spoil me: of course, you must look over the Arno, too. I meant that. The first vacant room in the front—” “You must have it,” said Miss Bartlett, part of whose travelling expenses were paid by Lucy’s mother—a piece of generosity to which she made many a tactful allusion.</p>
+        <p>“No, no. You must have it.”</p>
+        <p>“I insist on it. Your mother would never forgive me, Lucy.”</p>
+        <p>“She would never forgive <em>me</em>.”</p>
+        <p>The ladies’ voices grew animated, and—if the sad truth be owned—a little peevish. They were tired, and under the guise of unselfishness they wrangled. Some of their neighbours interchanged glances, and one of them—one of the ill-bred people whom one does meet abroad—leant forward over the table and actually intruded into their argument. He said:</p>
+        <p>“I have a view, I have a view.”</p>
+      </section>
 
-<section class="scene" id="scene-2" aria-labelledby="h-2">
-  <header><h2 id="h-2"><span class="num" aria-hidden="true">II</span>An offer from the wrong sort of person</h2></header>
-  <div class="prose">
-    <p class="lead">Miss Bartlett was startled. Generally at a pension people looked them over for a day or two before speaking, and often did not find out that they would “do” till they had gone. She knew that the intruder was ill-bred, even before she glanced at him. He was an old man, of heavy build, with a fair, shaven face and large eyes. There was something childish in those eyes, though it was not the childishness of senility. What exactly it was Miss Bartlett did not stop to consider, for her glance passed on to his clothes. These did not attract her. He was probably trying to become acquainted with them before they got into the swim. So she assumed a dazed expression when he spoke to her, and then said: “A view? Oh, a view! How delightful a view is!”</p>
-    <p>“This is my son,” said the old man; “his name’s George. He has a view too.”</p>
-    <p>“Ah,” said Miss Bartlett, repressing Lucy, who was about to speak.</p>
-    <p>“What I mean,” he continued, “is that you can have our rooms, and we’ll have yours. We’ll change.”</p>
-    <p>The better class of tourist was shocked at this, and sympathized with the new-comers. Miss Bartlett, in reply, opened her mouth as little as possible, and said “Thank you very much indeed; that is out of the question.”</p>
-    <p>“Why?” said the old man, with both fists on the table.</p>
-    <p>“Because it is quite out of the question, thank you.”</p>
-    <p>“You see, we don’t like to take—” began Lucy. Her cousin again repressed her.</p>
-    <p>“But why?” he persisted. “Women like looking at a view; men don’t.” And he thumped with his fists like a naughty child, and turned to his son, saying, “George, persuade them!”</p>
-  </div>
+      <div class="divider" aria-hidden="true"></div>
 
-  <aside class="pull" aria-hidden="true"><blockquote>“Women like looking at a view; men don’t.”</blockquote></aside>
+      <!-- SCENE 2 -->
+      <section aria-labelledby="scene2">
+        <h2 id="scene2">II. An offer from the wrong sort of person</h2>
+        <p class="opening">Miss Bartlett was startled. Generally at a pension people looked them over for a day or two before speaking, and often did not find out that they would “do” till they had gone. She knew that the intruder was ill-bred, even before she glanced at him. He was an old man, of heavy build, with a fair, shaven face and large eyes. There was something childish in those eyes, though it was not the childishness of senility. What exactly it was Miss Bartlett did not stop to consider, for her glance passed on to his clothes. These did not attract her. He was probably trying to become acquainted with them before they got into the swim. So she assumed a dazed expression when he spoke to her, and then said: “A view? Oh, a view! How delightful a view is!”</p>
+        <p>“This is my son,” said the old man; “his name’s George. He has a view too.”</p>
+        <p>“Ah,” said Miss Bartlett, repressing Lucy, who was about to speak.</p>
+        <p>“What I mean,” he continued, “is that you can have our rooms, and we’ll have yours. We’ll change.”</p>
+        <p>The better class of tourist was shocked at this, and sympathized with the new-comers. Miss Bartlett, in reply, opened her mouth as little as possible, and said “Thank you very much indeed; that is out of the question.”</p>
+        <p>“Why?” said the old man, with both fists on the table.</p>
+        <p>“Because it is quite out of the question, thank you.”</p>
+        <p>“You see, we don’t like to take—” began Lucy. Her cousin again repressed her.</p>
+        <p>“But why?” he persisted. “Women like looking at a view; men don’t.” And he thumped with his fists like a naughty child, and turned to his son, saying, “George, persuade them!”</p>
 
-  <div class="prose">
-    <p class="lead">“It’s so obvious they should have the rooms,” said the son. “There’s nothing else to say.”</p>
-    <p>He did not look at the ladies as he spoke, but his voice was perplexed and sorrowful. Lucy, too, was perplexed; but she saw that they were in for what is known as “quite a scene,” and she had an odd feeling that whenever these ill-bred tourists spoke the contest widened and deepened till it dealt, not with rooms and views, but with—well, with something quite different, whose existence she had not realized before. Now the old man attacked Miss Bartlett almost violently: Why should she not change? What possible objection had she? They would clear out in half an hour.</p>
-    <p>Miss Bartlett, though skilled in the delicacies of conversation, was powerless in the presence of brutality. It was impossible to snub any one so gross. Her face reddened with displeasure. She looked around as much as to say, “Are you all like this?” And two little old ladies, who were sitting further up the table, with shawls hanging over the backs of the chairs, looked back, clearly indicating “We are not; we are genteel.”</p>
-    <p>“Eat your dinner, dear,” she said to Lucy, and began to toy again with the meat that she had once censured.</p>
-    <p>Lucy mumbled that those seemed very odd people opposite.</p>
-    <p>“Eat your dinner, dear. This pension is a failure. To-morrow we will make a change.”</p>
-  </div>
-</section>
+        <aside class="pull-quote" aria-hidden="true">“Women like looking at a view; men don’t.”</aside>
 
-<svg class="orn" viewBox="0 0 88 40" aria-hidden="true" focusable="false"><path d="M30 36V20a14 14 0 0 1 28 0v16" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="8" cy="30" r="3" fill="currentColor"/><circle cx="80" cy="30" r="3" fill="currentColor"/><circle cx="44" cy="20" r="3.5" fill="currentColor"/></svg>
+        <p class="opening">“It’s so obvious they should have the rooms,” said the son. “There’s nothing else to say.”</p>
+        <p>He did not look at the ladies as he spoke, but his voice was perplexed and sorrowful. Lucy, too, was perplexed; but she saw that they were in for what is known as “quite a scene,” and she had an odd feeling that whenever these ill-bred tourists spoke the contest widened and deepened till it dealt, not with rooms and views, but with—well, with something quite different, whose existence she had not realized before. Now the old man attacked Miss Bartlett almost violently: Why should she not change? What possible objection had she? They would clear out in half an hour.</p>
+        <p>Miss Bartlett, though skilled in the delicacies of conversation, was powerless in the presence of brutality. It was impossible to snub any one so gross. Her face reddened with displeasure. She looked around as much as to say, “Are you all like this?” And two little old ladies, who were sitting further up the table, with shawls hanging over the backs of the chairs, looked back, clearly indicating “We are not; we are genteel.”</p>
+        <p>“Eat your dinner, dear,” she said to Lucy, and began to toy again with the meat that she had once censured.</p>
+        <p>Lucy mumbled that those seemed very odd people opposite.</p>
+        <p>“Eat your dinner, dear. This pension is a failure. To-morrow we will make a change.”</p>
+      </section>
 
-<section class="scene" id="scene-3" aria-labelledby="h-3">
-  <header><h2 id="h-3"><span class="num" aria-hidden="true">III</span>The rooms, accepted</h2></header>
+      <div class="divider" aria-hidden="true"></div>
 
-  <figure class="window">
-    <svg viewBox="0 0 220 340" role="img" aria-labelledby="a3t a3d">
-      <title id="a3t">Lucy’s window at night</title>
-      <desc id="a3d">Through an arched window: a cypress, dark hills, a small church on a ridge, a rising moon, and gold lights trembling on the river.</desc>
-      <defs><clipPath id="nw"><path d="M10 330V110a100 100 0 0 1 200 0V330z"/></clipPath></defs>
-      <g clip-path="url(#nw)">
-        <rect width="220" height="340" fill="var(--night)"/>
-        <path d="M40 60h2M170 40h2M120 90h2M70 120h2M190 130h2M30 150h2" stroke="var(--paper)" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="150" cy="196" r="24" fill="var(--paper)" opacity=".92"/>
-        <path d="M0 220q50-26 100-8t120-22v150H0z" fill="#0B141B"/>
-        <path d="M120 206v-14h22v14zM116 192l15-10 15 10z" fill="#0B141B"/>
-        <path d="M0 262h220v80H0z" fill="#0E1A22"/>
-        <path d="M30 284h8M74 300h8M120 288h8M160 306h8M96 320h8M50 316h8" stroke="var(--moon)" stroke-width="3" stroke-linecap="round"/>
-        <path d="M44 260q-11-60 0-130 11 70 0 130z" fill="#0B141B"/>
-      </g>
-      <path d="M10 330V110a100 100 0 0 1 200 0V330z" fill="none" stroke="var(--ink)" stroke-width="6"/>
-    </svg>
-    <figcaption>The view, at last.</figcaption>
-  </figure>
+      <!-- SCENE 3 -->
+      <section aria-labelledby="scene3">
+        <h2 id="scene3">III. The rooms, accepted</h2>
 
-  <div class="prose">
-    <p class="gloss">Later that evening, in the drawing-room, Mr. Beebe—a clergyman the cousins know from home—has come to plead the Emersons’ case.</p>
-    <p class="lead">“Miss Bartlett,” he cried, “it’s all right about the rooms. I’m so glad. Mr. Emerson was talking about it in the smoking-room, and knowing what I did, I encouraged him to make the offer again. He has let me come and ask you. He would be so pleased.”</p>
-    <p>“Oh, Charlotte,” cried Lucy to her cousin, “we must have the rooms now. The old man is just as nice and kind as he can be.”</p>
-    <p>Miss Bartlett was silent.</p>
-    <p>“I fear,” said Mr. Beebe, after a pause, “that I have been officious. I must apologize for my interference.”</p>
-    <p>Gravely displeased, he turned to go. Not till then did Miss Bartlett reply: “My own wishes, dearest Lucy, are unimportant in comparison with yours. It would be hard indeed if I stopped you doing as you liked at Florence, when I am only here through your kindness. If you wish me to turn these gentlemen out of their rooms, I will do it. Would you then, Mr. Beebe, kindly tell Mr. Emerson that I accept his kind offer, and then conduct him to me, in order that I may thank him personally?”</p>
-    <p>She raised her voice as she spoke; it was heard all over the drawing-room, and silenced the Guelfs and the Ghibellines. The clergyman, inwardly cursing the female sex, bowed, and departed with her message.</p>
-    <p>“Remember, Lucy, I alone am implicated in this. I do not wish the acceptance to come from you. Grant me that, at all events.”</p>
-    <p>Mr. Beebe was back, saying rather nervously:</p>
-    <p>“Mr. Emerson is engaged, but here is his son instead.”</p>
-    <p>The young man gazed down on the three ladies, who felt seated on the floor, so low were their chairs.</p>
-    <p>“My father,” he said, “is in his bath, so you cannot thank him personally. But any message given by you to me will be given by me to him as soon as he comes out.”</p>
-    <p>Miss Bartlett was unequal to the bath. All her barbed civilities came forth wrong end first. Young Mr. Emerson scored a notable triumph to the delight of Mr. Beebe and to the secret delight of Lucy.</p>
-    <p>Charlotte’s energy! And her unselfishness! She had been thus all her life, but really, on this Italian tour, she was surpassing herself. So Lucy felt, or strove to feel. And yet—there was a rebellious spirit in her which wondered whether the acceptance might not have been less delicate and more beautiful. At all events, she entered her own room without any feeling of joy.</p>
-    <p>Miss Bartlett only sighed, and enveloped her in a protecting embrace as she wished her good-night. It gave Lucy the sensation of a fog, and when she reached her own room she opened the window and breathed the clean night air, thinking of the kind old man who had enabled her to see the lights dancing in the Arno and the cypresses of San Miniato, and the foot-hills of the Apennines, black against the rising moon.</p>
-  </div>
-</section>
+        <figure class="round-window">
+          <svg viewBox="0 0 150 150" role="img" aria-label="Lucy’s window at night: a cypress, dark hills, a rising moon and golden lights on the river">
+            <rect width="150" height="150" fill="#14202B"/>
+            <circle cx="100" cy="90" r="16" fill="#F1F0EA"/>
+            <ellipse cx="50" cy="120" rx="90" ry="35" fill="#0B141B"/>
+            <rect y="115" width="150" height="35" fill="#0E1A22"/>
+            <rect x="25" y="125" width="8" height="3" fill="#C9A24B"/>
+            <rect x="70" y="134" width="8" height="3" fill="#C9A24B"/>
+            <rect x="110" y="127" width="8" height="3" fill="#C9A24B"/>
+            <ellipse cx="30" cy="95" rx="6" ry="35" fill="#0B141B"/>
+          </svg>
+        </figure>
 
-</article>
-</main>
+        <p class="gloss">Later that evening, in the drawing-room, Mr. Beebe—a clergyman the cousins know from home—has come to plead the Emersons’ case.</p>
+        <p class="opening">“Miss Bartlett,” he cried, “it’s all right about the rooms. I’m so glad. Mr. Emerson was talking about it in the smoking-room, and knowing what I did, I encouraged him to make the offer again. He has let me come and ask you. He would be so pleased.”</p>
+        <p>“Oh, Charlotte,” cried Lucy to her cousin, “we must have the rooms now. The old man is just as nice and kind as he can be.”</p>
+        <p>Miss Bartlett was silent.</p>
+        <p>“I fear,” said Mr. Beebe, after a pause, “that I have been officious. I must apologize for my interference.”</p>
+        <p>Gravely displeased, he turned to go. Not till then did Miss Bartlett reply: “My own wishes, dearest Lucy, are unimportant in comparison with yours. It would be hard indeed if I stopped you doing as you liked at Florence, when I am only here through your kindness. If you wish me to turn these gentlemen out of their rooms, I will do it. Would you then, Mr. Beebe, kindly tell Mr. Emerson that I accept his kind offer, and then conduct him to me, in order that I may thank him personally?”</p>
+        <p>She raised her voice as she spoke; it was heard all over the drawing-room, and silenced the Guelfs and the Ghibellines. The clergyman, inwardly cursing the female sex, bowed, and departed with her message.</p>
+        <p>“Remember, Lucy, I alone am implicated in this. I do not wish the acceptance to come from you. Grant me that, at all events.”</p>
+        <p>Mr. Beebe was back, saying rather nervously:</p>
+        <p>“Mr. Emerson is engaged, but here is his son instead.”</p>
+        <p>The young man gazed down on the three ladies, who felt seated on the floor, so low were their chairs.</p>
+        <p>“My father,” he said, “is in his bath, so you cannot thank him personally. But any message given by you to me will be given by me to him as soon as he comes out.”</p>
+        <p>Miss Bartlett was unequal to the bath. All her barbed civilities came forth wrong end first. Young Mr. Emerson scored a notable triumph to the delight of Mr. Beebe and to the secret delight of Lucy.</p>
+        <p>Charlotte’s energy! And her unselfishness! She had been thus all her life, but really, on this Italian tour, she was surpassing herself. So Lucy felt, or strove to feel. And yet—there was a rebellious spirit in her which wondered whether the acceptance might not have been less delicate and more beautiful. At all events, she entered her own room without any feeling of joy.</p>
+        <p>Miss Bartlett only sighed, and enveloped her in a protecting embrace as she wished her good-night. It gave Lucy the sensation of a fog, and when she reached her own room she opened the window and breathed the clean night air, thinking of the kind old man who had enabled her to see the lights dancing in the Arno and the cypresses of San Miniato, and the foot-hills of the Apennines, black against the rising moon.</p>
+      </section>
 
-<footer class="note" aria-labelledby="h-note">
-  <h2 id="h-note">Designer’s note</h2>
-  <p>I treated the page as a window, because the chapter is about one. The arch that frames the title returns in the diptych of north and south views and again in the night window at the end, so the reader moves from a promised view to a denied one to a gift. Fraunces gives the title its soft, optically large cut; Source Serif 4 sets the text, and its small-size master keeps thin strokes sturdy. I am proudest of the justified, hyphenated measure of about sixty characters, which stays quiet enough for five minutes of reading, and of the arch-shaped float that lets lines curve around the last illustration. Every picture is hand-written SVG, and a small arch between scenes does the work of a printer’s fleuron. On phones I trade justification for a ragged edge, because narrow columns breed rivers.</p>
-  <p>Sources: text from Project Gutenberg eBook #2641 (E. M. Forster, 1908, public domain), with one italic transition line of my own in scene III. Typefaces Fraunces and Source Serif 4 via Google Fonts, both under the SIL Open Font License. All illustrations are original.</p>
-</footer>
+    </article>
+  </main>
 
-<script src="script.js" defer></script>
+  <footer>
+    <h2>Designer’s note</h2>
+    <p>I treated the page as a window, because the chapter is about one. The arch on the title page returns as the pair of north and south views and again as the round window at the end, so the reader moves from a promised view to a denied one to a gift. Fraunces gives the headings a soft, old-fashioned voice, and Source Serif 4 keeps the text calm and readable. I am proudest of the justified, hyphenated column, about sixty-five characters wide, which stays quiet enough for five minutes of reading, and of the round window that lets the lines curve around it. Every picture is hand-written SVG, and a small arch between scenes does the job of a printer’s ornament. On phones I drop justification, because narrow columns leave big gaps between words.</p>
+    <p class="sources">Sources: text from Project Gutenberg eBook #2641 (E. M. Forster, 1908, public domain), with one italic transition line of my own in scene III. Fonts: Fraunces and Source Serif 4 from Google Fonts (SIL Open Font License). All illustrations are original.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
