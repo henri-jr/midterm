@@ -1,98 +1,237 @@
-:root{
-  --paper:#ECEFE8; --ink:#1C2623; --arno:#3E6B6B; --cypress:#1F3B34;
-  --moon:#C9A24B; --tomato:#A8432C; --wall:#B9B7AC; --night:#14202B;
-  --rule:color-mix(in srgb,var(--ink) 25%,transparent);
-  --display:"Fraunces","Iowan Old Style",Georgia,serif;
-  --text:"Source Serif 4","Iowan Old Style",Georgia,serif;
-  --measure:60ch;
-  color-scheme:light;
+/* ---------- Colors (change these and the whole page changes) ---------- */
+:root {
+  --paper: #F1F0EA;
+  --ink: #222222;
+  --green: #2F5D5A;
+  --gold: #C9A24B;
+  --red: #A8432C;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--paper:#121B1E;--ink:#DCE3DC;--arno:#7FB0A8;--moon:#D9B45A;--tomato:#E08A6E;--wall:#5E625F;color-scheme:dark}
+
+/* Night reading mode: JavaScript adds the class "night" to <body> */
+body.night {
+  --paper: #14202B;
+  --ink: #E6E6DC;
+  --green: #8FC0B8;
 }
-:root[data-theme="dark"]{--paper:#121B1E;--ink:#DCE3DC;--arno:#7FB0A8;--moon:#D9B45A;--tomato:#E08A6E;--wall:#5E625F;color-scheme:dark}
 
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--text);font-weight:400;font-optical-sizing:auto;
-  font-size:clamp(1.0625rem,.98rem + .4vw,1.25rem);line-height:1.6;
-  font-kerning:normal;font-variant-ligatures:common-ligatures;
+/* ---------- Page basics ---------- */
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.6;
+  font-optical-sizing: auto;
 }
-.skip{position:absolute;left:-999px}
-.skip:focus{left:1rem;top:1rem;background:var(--ink);color:var(--paper);padding:.5rem 1rem;z-index:9}
-:focus-visible{outline:3px solid var(--moon);outline-offset:3px}
 
-/* night toggle */
-.night-toggle{position:fixed;top:.75rem;right:.75rem;z-index:5;font:500 .85rem/1 var(--text);
-  color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:2rem;padding:.55rem .9rem;cursor:pointer}
-.night-toggle[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-
-/* title page */
-.titlepage{min-height:100svh;display:grid;grid-template-columns:1fr minmax(14rem,22rem);gap:clamp(1.5rem,5vw,4rem);
-  align-items:center;max-width:62rem;margin:0 auto;padding:clamp(1.5rem,5vw,4rem)}
-.titlepage h1{font-family:var(--display);font-weight:300;font-optical-sizing:auto;
-  font-variation-settings:"SOFT" 100;font-size:clamp(3rem,9vw,6.5rem);line-height:.95;letter-spacing:-.025em;margin:0 0 1.5rem;text-wrap:balance}
-.titlepage h1 em{font-style:italic;font-weight:300}
-.byline{font-family:var(--display);font-weight:400;font-style:italic;font-size:1.5rem;margin:0}
-.edition{margin:2rem 0 0;max-width:30ch;font-size:.95rem;font-weight:500;letter-spacing:.01em;color:color-mix(in srgb,var(--ink) 80%,var(--paper))}
-.arch{display:block;width:100%;height:auto}
-
-/* reading column */
-main{padding:0 1.25rem 3rem}
-.scene{max-width:var(--measure);margin:0 auto clamp(3rem,8vw,5rem)}
-.scene header{margin-bottom:1.5rem}
-.scene h2{font-family:var(--display);font-weight:350;font-size:clamp(1.9rem,4.5vw,2.6rem);line-height:1.1;
-  letter-spacing:-.01em;margin:0;font-variation-settings:"SOFT" 100;text-wrap:balance}
-.num{display:block;font-family:var(--display);font-style:italic;font-weight:300;color:var(--tomato);font-size:1.25rem;margin-bottom:.35rem}
-
-.prose{text-align:justify;hyphens:auto;hyphenate-limit-chars:6 3 3;hyphenate-limit-lines:2;
-  text-wrap:pretty;hanging-punctuation:first allow-end;orphans:2;widows:2}
-.prose p{margin:0;text-indent:1.15em}
-.prose p.lead,.prose p.gloss{text-indent:0}
-.lead::first-line{font-variant-caps:all-small-caps;letter-spacing:.045em}
-#scene-1 .lead::first-letter{initial-letter:3;font-family:var(--display);font-weight:600;color:var(--arno);margin-right:.08em;font-variant-caps:normal}
-@supports not (initial-letter:3){
-  #scene-1 .lead::first-letter{float:left;font-size:4.1em;line-height:.8;padding:.05em .08em 0 0}
+h1, h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 300;
 }
-.gloss{font-style:italic;font-size:.92em;color:color-mix(in srgb,var(--ink) 75%,var(--paper));margin-bottom:1em!important;
-  border-inline-start:3px solid var(--moon);padding-inline-start:.9rem}
 
-/* figures */
-figure{margin:0}
-figcaption{font-family:var(--text);font-weight:500;font-size:.85rem;line-height:1.4;letter-spacing:.012em;
-  font-variation-settings:"opsz" 8;margin-top:.6rem;color:color-mix(in srgb,var(--ink) 85%,var(--paper))}
-.diptych{margin:2rem 0;padding:1rem 0;border:2px solid;border-inline:0;
-  border-image:repeating-linear-gradient(90deg,var(--moon) 0 7px,transparent 7px 12px) 2}
-.diptych svg{width:100%;height:auto;display:block}
-.window{float:right;width:min(13rem,42%);margin:.25rem 0 1rem 1.5rem;
-  shape-outside:inset(0 round 50% 50% 0 0 / 32% 32% 0 0);shape-margin:.9rem}
-.window svg{width:100%;height:auto;display:block}
-
-/* pull quote and ornament */
-.pull{margin:2.25rem 0;padding:1.25rem 0;border-block:1px solid var(--rule);text-align:center}
-.pull blockquote{margin:0;font-family:var(--display);font-style:italic;font-weight:300;
-  font-size:clamp(1.5rem,3.6vw,2rem);line-height:1.25;font-variation-settings:"SOFT" 100;text-wrap:balance;color:var(--arno)}
-.orn{display:block;width:5.5rem;height:auto;margin:0 auto clamp(3rem,8vw,5rem);color:var(--moon)}
-
-/* designer's note */
-.note{max-width:var(--measure);margin:0 auto;padding:2rem 1.25rem 4rem;border-top:2px solid var(--ink)}
-.note h2{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:0 0 1rem}
-.note p{margin:0 0 1rem;font-size:.95rem;line-height:1.55;hyphens:auto}
-.note p:last-child{font-size:.85rem;font-weight:500}
-
-/* phones */
-@media (max-width:40rem){
-  .titlepage{grid-template-columns:1fr;min-height:0;padding-block:4rem 2rem}
-  .titlepage .arch{max-width:15rem;margin-inline:auto}
-  .prose{text-align:left}                /* narrow justified columns open rivers */
-  .window{float:none;width:11rem;margin:1.25rem auto;shape-outside:none}
-  .pull{margin:1.5rem 0}
-  #scene-1 .lead::first-letter{initial-letter:2}
+/* ---------- Night button ---------- */
+#night-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 20px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  cursor: pointer;
 }
-@media (prefers-reduced-motion:no-preference){
-  .titlepage .arch{animation:rise 1.2s ease-out both}
-  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ---------- Title page ---------- */
+.title-page {
+  text-align: center;
+  padding: 60px 20px;
 }
-@media print{.night-toggle{display:none}}
+
+.title-page h1 {
+  font-size: 64px;
+  line-height: 1;
+  margin: 30px 0 10px;
+}
+
+.byline {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-size: 24px;
+  margin: 0;
+}
+
+.edition {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ---------- The arch: the idea that ties the page together ---------- */
+.arch {
+  width: 200px;
+  margin: 0 auto;
+  border: 6px solid var(--ink);
+  border-radius: 100px 100px 0 0;   /* round top = arched window */
+  overflow: hidden;                 /* clips the picture to the arch */
+}
+
+.arch svg {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Story text ---------- */
+main {
+  max-width: 34em;                  /* about 65 characters per line */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.15;
+  margin: 0 0 24px;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;                    /* needs lang="en" in the HTML */
+  text-indent: 1.2em;               /* book-style indent, no gaps between paragraphs */
+}
+
+/* ---------- Book details ---------- */
+
+/* 1. Small caps on the first line of each section */
+.opening {
+  text-indent: 0;
+}
+.opening::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+/* 2. Drop cap */
+.dropcap::first-letter {
+  float: left;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 4em;
+  line-height: 0.8;
+  padding-right: 8px;
+  color: var(--green);
+}
+
+/* 3. Pull quote */
+.pull-quote {
+  margin: 36px 0;
+  padding: 18px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-align: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--green);
+}
+
+/* 4. Ornament between scenes: a tiny arch drawn with a border */
+.divider {
+  width: 40px;
+  height: 20px;
+  margin: 50px auto;
+  border: 3px solid var(--gold);
+  border-bottom: none;
+  border-radius: 40px 40px 0 0;
+}
+
+/* Note from me, not Forster */
+.gloss {
+  text-indent: 0;
+  font-style: italic;
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Pictures inside the story ---------- */
+
+/* Two arches side by side */
+.pair {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 0;
+}
+.pair .arch {
+  width: 150px;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 12px 0 30px;
+}
+
+/* Round window: the text flows around the curve */
+.round-window {
+  float: right;
+  width: 150px;
+  height: 150px;
+  margin: 0 0 10px 20px;
+  border: 6px solid var(--ink);
+  border-radius: 50%;
+  overflow: hidden;
+  shape-outside: circle(50%);       /* this line makes the text curve */
+}
+.round-window svg {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Designer's note ---------- */
+footer {
+  max-width: 34em;
+  margin: 60px auto 0;
+  padding: 30px 20px 60px;
+  border-top: 2px solid var(--ink);
+}
+footer h2 {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+footer p {
+  text-indent: 0;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.sources {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .title-page h1 { font-size: 42px; }
+  h2 { font-size: 26px; }
+  p { text-align: left; }           /* justified text on a small screen leaves big gaps */
+  .pair { gap: 12px; }
+  .pair .arch { width: 44%; }
+  .round-window {
+    float: none;                    /* stop wrapping, center it instead */
+    margin: 20px auto;
+  }
+  .pull-quote { font-size: 22px; }
+}
